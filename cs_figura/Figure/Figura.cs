@@ -13,8 +13,6 @@ namespace cs_figura
         public Figura(string figure)
         {
             NameFigure = figure;
-            SquareFigure();
-            PerimeterFigure();
         }
 
         public abstract double SquareFigure();

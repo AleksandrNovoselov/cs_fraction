@@ -4,8 +4,8 @@ namespace cs_figura
 {
     public class Triangle : Figura
     {
-        private double _katetOne;
-        private double _katetTwo;
+        private readonly double _katetOne;
+        private readonly double _katetTwo;
 
         public Triangle(string figure, double one, double two) : base(figure)
         {

@@ -2,9 +2,9 @@
 {
     public class Parallelogram : Figura
     {
-        private double _side1;
-        private double _side2;
-        private double _height;
+        private readonly double _side1;
+        private readonly double _side2;
+        private readonly double _height;
 
         public Parallelogram(string figure, double side1, double side2, double height) : base(figure)
         {
