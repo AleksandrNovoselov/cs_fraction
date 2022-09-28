@@ -7,10 +7,6 @@ namespace cs_fraction
         private static void Main(string[] args)
         {
             Fraction f = new Fraction(3, 4);
-            //Fraction f2 = new Fraction(5, 8);
-            //var f3 = f - f2;
-            //Console.WriteLine(f.ToString());
-            //Console.WriteLine(f3.ToString());
             int a = 10;
 
             Fraction f1 = f * a;

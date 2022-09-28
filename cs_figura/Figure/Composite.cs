@@ -5,7 +5,7 @@
         public Figura[] Figuras { get; set; }
         public double Square { get; set; }
 
-        public Composite( Figura[] figuras)
+        public Composite(params Figura[] figuras)
         {
             Figuras = figuras;
             SquareFigure();
@@ -22,7 +22,7 @@
 
         public override string ToString()
         {
-           return  $"Составная фигура\tПлощадь {Square} см2";
+            return $"Составная фигура\tПлощадь {Square} см2";
         }
     }
 }

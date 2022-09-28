@@ -18,15 +18,7 @@ namespace cs_figura
             var romb = new Rhomb("Ромб", 5, 7);
             romb.Print();
 
-            Figura[] composites = new Figura[]
-            {
-                new Triangle("треугольник", 5, 5),
-                new Square("Квадрат", 5),
-                new Rhomb("Ромб", 5, 7),
-                new Rectangle("прямоугольник", 5, 7)
-            };
-
-            Composite composite = new Composite(composites);
+            Composite composite = new Composite(sq, rec, romb);
             Console.WriteLine(composite.ToString());
 
             Console.ReadKey();

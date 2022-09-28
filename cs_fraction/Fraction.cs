@@ -4,11 +4,8 @@ namespace cs_fraction
 {
     public class Fraction
     {
-        private int _numerator;
-        private int _denominator;
-
-        public int Numerator { get => _numerator; set => _numerator = value; }
-        public int Denominator { get => _denominator; set => _denominator = value; }
+        public int Numerator { get; private set; }
+        public int Denominator { get; private set; }
 
         public Fraction(int numerator, int denominator)//конструктор
         {
@@ -21,10 +18,10 @@ namespace cs_fraction
                 denominator *= -1;
                 numerator *= -1;
             }
-            _numerator = numerator;
-            _denominator = denominator;
+            Numerator = numerator;
+            Denominator = denominator;
 
-            reduce();
+            Reduce();
         }
 
         public Fraction(int number) : this(number, 1)
@@ -46,7 +43,6 @@ namespace cs_fraction
         {
             return left + new Fraction((int)(right * 1000000), 1000000);
         }
-
 
         public static Fraction operator +(int left, Fraction right)
         {
@@ -119,11 +115,11 @@ namespace cs_fraction
             return (decimal)left.Numerator * right.Denominator < (decimal)right.Numerator * left.Denominator;
         }
 
-
         public static bool operator true(Fraction fract)
         {
             return fract.Numerator < fract.Denominator;
         }
+
         public static bool operator false(Fraction fract)
         {
             return fract.Numerator > fract.Denominator;
@@ -132,6 +128,16 @@ namespace cs_fraction
         public override string ToString()
         {
             return Numerator + "/" + Denominator;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
 
         private int GreatestCommonDivisor(int a, int b)
@@ -147,7 +153,7 @@ namespace cs_fraction
             return a;
         }
 
-        private void reduce()
+        private void Reduce()
         {
             int gcdVal = GreatestCommonDivisor(Numerator, Denominator);
 
