@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Figure\Circle.cs" />
+    <Compile Include="Figure\Composite.cs" />
+    <Compile Include="Figure\Ellipse.cs" />
     <Compile Include="Figure\Figura.cs" />
+    <Compile Include="Figure\Parallelogram.cs" />
     <Compile Include="Figure\Rectangle.cs" />
     <Compile Include="Figure\Rhomb.cs" />
     <Compile Include="Figure\Square.cs" />
+    <Compile Include="Figure\Trapeze.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Figure\Triangle.cs" />
